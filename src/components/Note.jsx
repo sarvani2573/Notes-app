@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Note.css";
 import { TextField, Button, Card, CardContent, CardActions, Typography, Grid, IconButton, Container,} from "@mui/material";
 import { Edit, Delete } from "@mui/icons-material";
  
@@ -12,8 +11,7 @@ const NotesApp = () => {
   const handleAddNote = () => {
     if (title.trim() === "" || description.trim() === "") return;
     if (editingIndex !== null) {
-     
-      const updatedNotes = [...notes];
+     const updatedNotes = [...notes];
       updatedNotes[editingIndex] = { title, description };
       setNotes(updatedNotes);
       setEditingIndex(null);
@@ -36,10 +34,9 @@ const NotesApp = () => {
   };
  
   return (
-    <Container maxWidth="md">
-      <Typography variant="h4" align="center" gutterBottom>
-        Notes Manager
-      </Typography>
+    <Container maxWidth="md" sx={{ border: "2px solid black", borderRadius:"10px",padding:"10px", margin:"10px", backgroundColor:"bisque"}}>
+      <Typography variant="h4" align="center" gutterBottom color="green">
+        Notes App </Typography>
      
     
       <Grid container spacing={2} sx={{ mb: 3 }}>
@@ -50,7 +47,7 @@ const NotesApp = () => {
           <TextField fullWidth label="Description" value={description} onChange={(e) => setDescription(e.target.value)} variant="outlined"/>
         </Grid>
         <Grid item xs={12} sm={2}>
-          <Button variant="contained" color="green" fullWidth onClick={handleAddNote}> {editingIndex !== null ? "Update" : "Add"}
+          <Button variant="contained"  fullWidth onClick={handleAddNote}> {editingIndex !== null ? "Update" : "Add"}
           </Button>
         </Grid>
       </Grid>
