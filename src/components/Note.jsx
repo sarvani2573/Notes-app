@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Note.css"
+import "./Note.css";
 import { TextField, Button, Card, CardContent, CardActions, Typography, Grid, IconButton, Container,} from "@mui/material";
 import { Edit, Delete } from "@mui/icons-material";
  
