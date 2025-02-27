@@ -1,12 +1,12 @@
 
 import './App.css';
-import NotesManager from './components/Note';
+import NotesApp from './components/Note';
 
 
 function App() {
   return (
     <div className="App">
-      <NotesManager/>
+      <NotesApp/>
     </div>
   );
 }

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import "./Note.css"
 import { TextField, Button, Card, CardContent, CardActions, Typography, Grid, IconButton, Container,} from "@mui/material";
 import { Edit, Delete } from "@mui/icons-material";
  
-const NotesManager = () => {
+const NotesApp = () => {
   const [notes, setNotes] = useState([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -79,6 +80,6 @@ const NotesManager = () => {
   );
 };
  
-export default NotesManager;
+export default NotesApp;
  
  
